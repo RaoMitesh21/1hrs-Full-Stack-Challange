@@ -10,6 +10,6 @@ services:
       - key: AI_INTERVIEW_SECRET
         generateValue: true
       - key: CORS_ORIGINS
-        value: https://your-domain.com,https://interviewiq.vercel.app
+        value: https://raomitesh.me,https://www.raomitesh.me,https://1hrs-full-stack-challange-tkbu.vercel.app
       - key: PYTHON_VERSION
         value: 3.11.6
