@@ -30,12 +30,15 @@ from helpers import (
 
 app = Flask(__name__)
 
-# Allow requests from Vercel frontend + localhost dev
+# Allow requests from Vercel frontend + localhost dev + production domains
 allowed_origins = [
     "http://localhost:5173",
     "http://localhost:4173",
+    "https://1hrs-full-stack-challange-tkbu.vercel.app",
+    "https://raomitesh.me",
+    "https://www.raomitesh.me",
 ]
-# Add custom domain / Vercel URLs from environment
+# Add extra origins from environment
 extra_origins = os.environ.get("CORS_ORIGINS", "")
 if extra_origins:
     allowed_origins.extend([o.strip() for o in extra_origins.split(",") if o.strip()])
