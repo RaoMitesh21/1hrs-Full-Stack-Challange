@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# build.sh — Render build script for backend
+# build.sh - Render build script for backend
 set -o errexit
 
 pip install --upgrade pip
