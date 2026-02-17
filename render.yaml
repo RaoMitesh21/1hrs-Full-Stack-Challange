@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: interviewiq-api
+    runtime: python
+    region: oregon
+    rootDir: backend
+    buildCommand: ./build.sh
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
+    envVars:
+      - key: AI_INTERVIEW_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://your-domain.com,https://interviewiq.vercel.app
+      - key: PYTHON_VERSION
+        value: 3.11.6

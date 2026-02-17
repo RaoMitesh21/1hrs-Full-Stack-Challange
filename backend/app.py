@@ -29,7 +29,18 @@ from helpers import (
 )
 
 app = Flask(__name__)
-CORS(app)
+
+# Allow requests from Vercel frontend + localhost dev
+allowed_origins = [
+    "http://localhost:5173",
+    "http://localhost:4173",
+]
+# Add custom domain / Vercel URLs from environment
+extra_origins = os.environ.get("CORS_ORIGINS", "")
+if extra_origins:
+    allowed_origins.extend([o.strip() for o in extra_origins.split(",") if o.strip()])
+
+CORS(app, origins=allowed_origins, supports_credentials=True)
 
 app.config["SECRET_KEY"] = os.environ.get("AI_INTERVIEW_SECRET", "dev-secret-key-ai-interview-lab-2025!")
 
@@ -197,4 +208,5 @@ def analytics():
 # ── Run ──────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(debug=True, host="0.0.0.0", port=port)

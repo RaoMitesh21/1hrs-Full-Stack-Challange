@@ -8,9 +8,20 @@ an fcntl advisory lock so concurrent Flask workers don't corrupt data.
 import json
 import os
 import re
-import fcntl
 from collections import Counter
 from datetime import datetime
+
+# Cross-platform file locking
+try:
+    import fcntl
+    def _lock_sh(fh): fcntl.flock(fh, fcntl.LOCK_SH)
+    def _lock_ex(fh): fcntl.flock(fh, fcntl.LOCK_EX)
+    def _unlock(fh):  fcntl.flock(fh, fcntl.LOCK_UN)
+except ImportError:
+    # Windows fallback — no-op locks
+    def _lock_sh(fh): pass
+    def _lock_ex(fh): pass
+    def _unlock(fh):  pass
 
 # ── paths ────────────────────────────────────────────────────
 
@@ -29,33 +40,32 @@ def _load(name):
     if not os.path.exists(path):
         return []
     with open(path, "r", encoding="utf-8") as fh:
-        fcntl.flock(fh, fcntl.LOCK_SH)
+        _lock_sh(fh)
         try:
             data = json.load(fh)
         except (json.JSONDecodeError, ValueError):
             data = []
         finally:
-            fcntl.flock(fh, fcntl.LOCK_UN)
+            _unlock(fh)
     return data
 
 def _save(name, data):
     """Write a JSON list to one of the data files (exclusive lock)."""
     path = DB_FILES[name]
     with open(path, "w", encoding="utf-8") as fh:
-        fcntl.flock(fh, fcntl.LOCK_EX)
+        _lock_ex(fh)
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.flush()
-        fcntl.flock(fh, fcntl.LOCK_UN)
+        _unlock(fh)
 
 def _append(name, record):
     """Append a single record to a JSON list file (atomic read-modify-write)."""
     path = DB_FILES[name]
-    # open in r+ so we can lock before reading
     if not os.path.exists(path):
         _save(name, [record])
         return
     with open(path, "r+", encoding="utf-8") as fh:
-        fcntl.flock(fh, fcntl.LOCK_EX)
+        _lock_ex(fh)
         try:
             data = json.load(fh)
         except (json.JSONDecodeError, ValueError):
@@ -65,7 +75,7 @@ def _append(name, record):
         fh.truncate()
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.flush()
-        fcntl.flock(fh, fcntl.LOCK_UN)
+        _unlock(fh)
 
 
 # ═══════════════════════════════════════════════════════════════

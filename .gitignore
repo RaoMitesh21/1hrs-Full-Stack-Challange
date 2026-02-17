@@ -1,0 +1,19 @@
+# Dependencies
+frontend/node_modules/
+backend/venv/
+backend/__pycache__/
+
+# Build output
+frontend/dist/
+
+# Environment
+frontend/.env.local
+frontend/.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
