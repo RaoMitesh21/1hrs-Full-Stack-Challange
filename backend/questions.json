@@ -1,0 +1,313 @@
+[
+  {
+    "id": "q-fe-e1",
+    "role": "frontend",
+    "difficulty": "easy",
+    "text": "Explain the difference between margin and padding in CSS.",
+    "keywords": ["margin", "padding", "box model", "spacing", "border"],
+    "category": "CSS Fundamentals",
+    "time_limit": 120
+  },
+  {
+    "id": "q-fe-e2",
+    "role": "frontend",
+    "difficulty": "easy",
+    "text": "What is the DOM? How does a browser use it to render a web page?",
+    "keywords": ["dom", "document", "tree", "nodes", "render", "browser", "html"],
+    "category": "Browser Internals",
+    "time_limit": 120
+  },
+  {
+    "id": "q-fe-e3",
+    "role": "frontend",
+    "difficulty": "easy",
+    "text": "What are semantic HTML elements and why should you use them?",
+    "keywords": ["semantic", "accessibility", "header", "nav", "section", "article", "seo"],
+    "category": "HTML",
+    "time_limit": 120
+  },
+  {
+    "id": "q-fe-m1",
+    "role": "frontend",
+    "difficulty": "medium",
+    "text": "How do you approach optimizing render performance for a React application?",
+    "keywords": ["reconciliation", "memoization", "useMemo", "useCallback", "virtual dom", "code-splitting", "lazy", "suspense"],
+    "category": "React Performance",
+    "time_limit": 180
+  },
+  {
+    "id": "q-fe-m2",
+    "role": "frontend",
+    "difficulty": "medium",
+    "text": "Compare and contrast CSS Flexbox and CSS Grid. When would you choose one over the other?",
+    "keywords": ["flexbox", "grid", "layout", "one-dimensional", "two-dimensional", "responsive", "align", "justify"],
+    "category": "CSS Layout",
+    "time_limit": 180
+  },
+  {
+    "id": "q-fe-m3",
+    "role": "frontend",
+    "difficulty": "medium",
+    "text": "Explain the concept of closures in JavaScript and give a practical use case.",
+    "keywords": ["closure", "scope", "lexical", "function", "variable", "encapsulation", "private", "callback"],
+    "category": "JavaScript Core",
+    "time_limit": 180
+  },
+  {
+    "id": "q-fe-m4",
+    "role": "frontend",
+    "difficulty": "medium",
+    "text": "What is the difference between controlled and uncontrolled components in React?",
+    "keywords": ["controlled", "uncontrolled", "state", "ref", "form", "input", "onChange", "value"],
+    "category": "React Patterns",
+    "time_limit": 180
+  },
+  {
+    "id": "q-fe-h1",
+    "role": "frontend",
+    "difficulty": "hard",
+    "text": "Design a client-side caching strategy for a single-page application that must work offline. Describe the architecture.",
+    "keywords": ["service worker", "cache", "indexeddb", "offline", "stale", "revalidate", "sync", "manifest", "strategy"],
+    "category": "Architecture",
+    "time_limit": 300
+  },
+  {
+    "id": "q-fe-h2",
+    "role": "frontend",
+    "difficulty": "hard",
+    "text": "How would you implement a real-time collaborative text editor in the browser? Discuss conflict resolution.",
+    "keywords": ["crdt", "operational transform", "websocket", "conflict", "merge", "cursor", "latency", "state"],
+    "category": "System Design",
+    "time_limit": 300
+  },
+
+  {
+    "id": "q-be-e1",
+    "role": "backend",
+    "difficulty": "easy",
+    "text": "What is the purpose of a database index?",
+    "keywords": ["index", "query", "performance", "lookup", "btree", "scan"],
+    "category": "Databases",
+    "time_limit": 120
+  },
+  {
+    "id": "q-be-e2",
+    "role": "backend",
+    "difficulty": "easy",
+    "text": "Explain the difference between GET and POST HTTP methods.",
+    "keywords": ["get", "post", "idempotent", "body", "request", "url", "safe", "parameters"],
+    "category": "HTTP",
+    "time_limit": 120
+  },
+  {
+    "id": "q-be-e3",
+    "role": "backend",
+    "difficulty": "easy",
+    "text": "What is REST? What makes an API RESTful?",
+    "keywords": ["rest", "stateless", "resource", "endpoint", "http", "crud", "json", "uniform"],
+    "category": "API Design",
+    "time_limit": 120
+  },
+  {
+    "id": "q-be-m1",
+    "role": "backend",
+    "difficulty": "medium",
+    "text": "Describe the differences between SQL and NoSQL databases. When would you choose each?",
+    "keywords": ["sql", "nosql", "relational", "document", "schema", "scalability", "consistency", "acid", "base"],
+    "category": "Databases",
+    "time_limit": 180
+  },
+  {
+    "id": "q-be-m2",
+    "role": "backend",
+    "difficulty": "medium",
+    "text": "How does JWT authentication work? What are the security considerations?",
+    "keywords": ["jwt", "token", "header", "payload", "signature", "secret", "expiry", "stateless", "xss", "csrf"],
+    "category": "Authentication",
+    "time_limit": 180
+  },
+  {
+    "id": "q-be-m3",
+    "role": "backend",
+    "difficulty": "medium",
+    "text": "Explain the concept of database transactions and ACID properties.",
+    "keywords": ["transaction", "acid", "atomicity", "consistency", "isolation", "durability", "commit", "rollback"],
+    "category": "Databases",
+    "time_limit": 180
+  },
+  {
+    "id": "q-be-m4",
+    "role": "backend",
+    "difficulty": "medium",
+    "text": "What is middleware in the context of web frameworks? Give examples of common middleware.",
+    "keywords": ["middleware", "request", "response", "pipeline", "logging", "authentication", "cors", "error"],
+    "category": "Web Frameworks",
+    "time_limit": 180
+  },
+  {
+    "id": "q-be-h1",
+    "role": "backend",
+    "difficulty": "hard",
+    "text": "Design a rate-limiting system for a high-traffic API. Discuss algorithms and distributed considerations.",
+    "keywords": ["rate limit", "token bucket", "sliding window", "redis", "distributed", "throttle", "429", "algorithm"],
+    "category": "System Design",
+    "time_limit": 300
+  },
+  {
+    "id": "q-be-h2",
+    "role": "backend",
+    "difficulty": "hard",
+    "text": "How would you design a message queue system? Compare at-least-once vs exactly-once delivery semantics.",
+    "keywords": ["queue", "kafka", "rabbitmq", "consumer", "producer", "at-least-once", "exactly-once", "idempotent", "offset", "acknowledgment"],
+    "category": "Distributed Systems",
+    "time_limit": 300
+  },
+
+  {
+    "id": "q-fs-e1",
+    "role": "fullstack",
+    "difficulty": "easy",
+    "text": "Explain the client-server model. How do a frontend and backend communicate?",
+    "keywords": ["client", "server", "http", "request", "response", "api", "json", "browser"],
+    "category": "Web Fundamentals",
+    "time_limit": 120
+  },
+  {
+    "id": "q-fs-m1",
+    "role": "fullstack",
+    "difficulty": "medium",
+    "text": "Walk through what happens from the moment a user types a URL in their browser until the page is fully rendered.",
+    "keywords": ["dns", "tcp", "http", "server", "html", "css", "javascript", "render", "parse", "dom"],
+    "category": "Web Internals",
+    "time_limit": 240
+  },
+  {
+    "id": "q-fs-m2",
+    "role": "fullstack",
+    "difficulty": "medium",
+    "text": "How do you handle authentication across a React frontend and a Node.js/Flask backend? Describe the full flow.",
+    "keywords": ["jwt", "token", "login", "cookie", "header", "middleware", "protected", "session", "refresh"],
+    "category": "Auth Flow",
+    "time_limit": 240
+  },
+  {
+    "id": "q-fs-h1",
+    "role": "fullstack",
+    "difficulty": "hard",
+    "text": "Design a scalable real-time notification system for a web application with millions of users.",
+    "keywords": ["websocket", "sse", "push", "pubsub", "redis", "queue", "scale", "fan-out", "connection"],
+    "category": "System Design",
+    "time_limit": 300
+  },
+
+  {
+    "id": "q-ml-e1",
+    "role": "ml",
+    "difficulty": "easy",
+    "text": "What is the difference between supervised and unsupervised learning? Give examples of each.",
+    "keywords": ["supervised", "unsupervised", "label", "classification", "regression", "clustering", "training"],
+    "category": "ML Fundamentals",
+    "time_limit": 120
+  },
+  {
+    "id": "q-ml-e2",
+    "role": "ml",
+    "difficulty": "easy",
+    "text": "Explain the bias-variance tradeoff.",
+    "keywords": ["bias", "variance", "overfit", "underfit", "tradeoff", "generalization", "complexity"],
+    "category": "ML Theory",
+    "time_limit": 120
+  },
+  {
+    "id": "q-ml-m1",
+    "role": "ml",
+    "difficulty": "medium",
+    "text": "Describe the steps you take to preprocess data before training a machine learning model.",
+    "keywords": ["cleaning", "normalization", "encoding", "missing", "feature", "scaling", "split", "outlier", "imputation"],
+    "category": "Data Preprocessing",
+    "time_limit": 180
+  },
+  {
+    "id": "q-ml-m2",
+    "role": "ml",
+    "difficulty": "medium",
+    "text": "Explain how a decision tree works. How does random forest improve upon it?",
+    "keywords": ["decision tree", "split", "entropy", "gini", "random forest", "ensemble", "bagging", "overfitting"],
+    "category": "Algorithms",
+    "time_limit": 180
+  },
+  {
+    "id": "q-ml-h1",
+    "role": "ml",
+    "difficulty": "hard",
+    "text": "Describe how you would handle class imbalance in a classification problem. Discuss multiple strategies.",
+    "keywords": ["resampling", "smote", "class weights", "precision", "recall", "f1", "roc", "auc", "threshold", "stratified"],
+    "category": "Advanced Classification",
+    "time_limit": 300
+  },
+  {
+    "id": "q-ml-h2",
+    "role": "ml",
+    "difficulty": "hard",
+    "text": "Explain the Transformer architecture. Why has it become dominant in NLP and beyond?",
+    "keywords": ["transformer", "attention", "self-attention", "encoder", "decoder", "positional", "embedding", "parallelization", "bert", "gpt"],
+    "category": "Deep Learning",
+    "time_limit": 300
+  },
+
+  {
+    "id": "q-devops-e1",
+    "role": "devops",
+    "difficulty": "easy",
+    "text": "What is the difference between a container and a virtual machine?",
+    "keywords": ["container", "vm", "docker", "kernel", "isolation", "overhead", "image", "hypervisor"],
+    "category": "Containers",
+    "time_limit": 120
+  },
+  {
+    "id": "q-devops-m1",
+    "role": "devops",
+    "difficulty": "medium",
+    "text": "Describe a CI/CD pipeline. What are the key stages and why is each important?",
+    "keywords": ["ci", "cd", "build", "test", "deploy", "pipeline", "automation", "integration", "delivery", "artifact"],
+    "category": "CI/CD",
+    "time_limit": 180
+  },
+  {
+    "id": "q-devops-h1",
+    "role": "devops",
+    "difficulty": "hard",
+    "text": "Design a zero-downtime deployment strategy for a microservices architecture. Discuss rollback mechanisms.",
+    "keywords": ["blue-green", "canary", "rolling", "rollback", "health check", "load balancer", "kubernetes", "deployment", "microservice"],
+    "category": "Deployment Strategies",
+    "time_limit": 300
+  },
+
+  {
+    "id": "q-sys-m1",
+    "role": "system-design",
+    "difficulty": "medium",
+    "text": "Design a URL shortener service like bit.ly. Describe the architecture and data model.",
+    "keywords": ["hash", "base62", "redirect", "database", "cache", "collision", "analytics", "scale"],
+    "category": "System Design",
+    "time_limit": 240
+  },
+  {
+    "id": "q-sys-h1",
+    "role": "system-design",
+    "difficulty": "hard",
+    "text": "Design a distributed file storage system similar to Google Drive. Discuss consistency, replication, and access control.",
+    "keywords": ["replication", "consistency", "partition", "metadata", "chunk", "access control", "cap theorem", "availability"],
+    "category": "System Design",
+    "time_limit": 300
+  },
+  {
+    "id": "q-sys-h2",
+    "role": "system-design",
+    "difficulty": "hard",
+    "text": "Design a search autocomplete system that handles millions of queries per second with sub-100ms latency.",
+    "keywords": ["trie", "prefix", "cache", "ranking", "sharding", "latency", "elasticsearch", "suggestion"],
+    "category": "System Design",
+    "time_limit": 300
+  }
+]

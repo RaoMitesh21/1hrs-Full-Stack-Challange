@@ -1,0 +1,48 @@
+[
+  {
+    "id": "150b2bae-184f-4cb7-8519-f4fa273c7a1b",
+    "user_id": "8e8c4daa-3380-4fad-84ea-79328811d01d",
+    "date": "2026-02-17T08:22:18.649788+00:00",
+    "role": "frontend",
+    "difficulty": "easy",
+    "category": "CSS Fundamentals",
+    "question_id": "q-fe-e1",
+    "question_text": "Explain the difference between margin and padding in CSS.",
+    "answer": "",
+    "score": 0,
+    "strengths": [],
+    "weaknesses": [
+      "No answer provided."
+    ],
+    "feedback": "You didn't submit an answer. Try to provide at least a short response.",
+    "tips": [
+      "Start by restating the question in your own words, then elaborate."
+    ]
+  },
+  {
+    "id": "32bc8693-b616-4a52-9611-5da06052c5af",
+    "user_id": "8e8c4daa-3380-4fad-84ea-79328811d01d",
+    "date": "2026-02-17T08:23:29.723182+00:00",
+    "role": "frontend",
+    "difficulty": "easy",
+    "category": "CSS Fundamentals",
+    "question_id": "q-fe-e1",
+    "question_text": "Explain the difference between margin and padding in CSS.",
+    "answer": "The Difference between margin and padding \nmargin is define the space or margin from left ,or right and up or down scale space\npadding is the taking a space near the container text or anything ",
+    "score": 56,
+    "strengths": [
+      "Sufficient depth in answer"
+    ],
+    "weaknesses": [
+      "Missing some domain keywords",
+      "Sentence structure could be improved for clarity"
+    ],
+    "feedback": "Keyword coverage: 2/5 matched.\n  ✓ Found: margin, padding\n  ✗ Missed: box model, spacing, border\nWord count: 35 (target ≈ 40 for easy).\nSentences: 1 — avg 35 words/sentence.\nVocabulary richness: 63%.",
+    "tips": [
+      "Start with a clear one-sentence summary, then elaborate.",
+      "Try to naturally mention: box model, spacing, border.",
+      "Vary sentence length — mix concise statements with detailed explanations.",
+      "End with a brief conclusion or real-world example to leave a strong impression."
+    ]
+  }
+]
