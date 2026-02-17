@@ -13,7 +13,6 @@ Endpoints:
 """
 
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import datetime
@@ -30,20 +29,28 @@ from helpers import (
 
 app = Flask(__name__)
 
-# Allow requests from Vercel frontend + localhost dev + production domains
-allowed_origins = [
+# ── CORS — bulletproof setup ─────────────────────────────────
+ALLOWED_ORIGINS = {
     "http://localhost:5173",
     "http://localhost:4173",
     "https://1hrs-full-stack-challange-tkbu.vercel.app",
     "https://raomitesh.me",
     "https://www.raomitesh.me",
-]
+}
 # Add extra origins from environment
 extra_origins = os.environ.get("CORS_ORIGINS", "")
 if extra_origins:
-    allowed_origins.extend([o.strip() for o in extra_origins.split(",") if o.strip()])
+    ALLOWED_ORIGINS.update([o.strip() for o in extra_origins.split(",") if o.strip()])
 
-CORS(app, origins=allowed_origins, supports_credentials=True)
+@app.after_request
+def add_cors_headers(response):
+    origin = request.headers.get("Origin", "")
+    if origin in ALLOWED_ORIGINS:
+        response.headers["Access-Control-Allow-Origin"] = origin
+        response.headers["Access-Control-Allow-Credentials"] = "true"
+        response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    return response
 
 app.config["SECRET_KEY"] = os.environ.get("AI_INTERVIEW_SECRET", "dev-secret-key-ai-interview-lab-2025!")
 
