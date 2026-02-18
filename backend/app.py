@@ -215,6 +215,13 @@ def analytics():
     return jsonify(data)
 
 
+# ── Health check (keep-alive for Render free tier) ───────────
+
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "ok", "timestamp": datetime.datetime.now(timezone.utc).isoformat()})
+
+
 # ── Run ──────────────────────────────────────────────────────
 
 if __name__ == "__main__":
